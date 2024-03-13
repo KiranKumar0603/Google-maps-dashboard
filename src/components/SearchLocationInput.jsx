@@ -58,13 +58,13 @@ const SearchLocationInput = ({ setSelectedLocation, sx }) => {
     setSelectedLocation(latLng);
   };
 
-  useEffect(() => {
-    console.log("loading scripts");
-    loadScript(
-      `https://maps.googleapis.com/maps/api/js?key=${REACT_APP_GOOGLE_MAPS_KEY}&libraries=places`,
-      () => handleScriptLoad(setQuery, autoCompleteRef)
-    );
-  }, []);
+  // useEffect(() => {
+  //   console.log("loading scripts");
+  //   loadScript(
+  //     `https://maps.googleapis.com/maps/api/js?key=${REACT_APP_GOOGLE_MAPS_KEY}&libraries=places`,
+  //     () => handleScriptLoad(setQuery, autoCompleteRef)
+  //   );
+  // }, []);
 
   return (
     <TextField
