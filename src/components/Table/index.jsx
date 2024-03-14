@@ -32,30 +32,33 @@ const TableDataGrid = ({
         width: "100%",
         display: "flex",
         flexDirection: "column",
-        my: 3,
+        my: 10,
       }}
     >
-      <Typography variant="h6">{heading}</Typography>
+      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Typography variant="h6">{heading}</Typography>
 
-      {isSearch && (
-        <TextField
-          placeholder="Search"
-          onChange={handleFilterChange}
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position="end">
-                <SearchIcon />
-              </InputAdornment>
-            ),
-          }}
-          sx={{
-            border: 0,
-            boxShadow: 2,
-            width: "300px",
-            alignSelf: "flex-end",
-          }}
-        />
-      )}
+        {isSearch && (
+          <TextField
+            placeholder="Search"
+            onChange={handleFilterChange}
+            InputProps={{
+              endAdornment: (
+                <InputAdornment position="end">
+                  <SearchIcon />
+                </InputAdornment>
+              ),
+            }}
+            sx={{
+              border: 0,
+              boxShadow: 2,
+              width: "300px",
+              alignSelf: "flex-end",
+            }}
+          />
+        )}
+      </Box>
+
       {rows.length > 0 ? (
         <DataGrid
           rows={rows}

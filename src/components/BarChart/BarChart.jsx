@@ -75,7 +75,9 @@ const CustumBarChart = () => {
               <Box
                 sx={{ width: 50, height: 10, backgroundColor: item, m: 1 }}
               ></Box>
-              <Typography>Lorem</Typography>
+              <Typography>
+                {index == 0 ? "Lorem" : index == 1 ? "Ipusum" : ""}
+              </Typography>
             </>
           );
         })}
