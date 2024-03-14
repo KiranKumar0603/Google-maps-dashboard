@@ -75,7 +75,7 @@ export default function SideNav() {
   const handleDrawer = () => {
     setOpen(!open);
   };
-  console.log(selectedItem);
+
   const handleItemClick = (route) => {
     navigate(route);
     setSelectedItem(route);

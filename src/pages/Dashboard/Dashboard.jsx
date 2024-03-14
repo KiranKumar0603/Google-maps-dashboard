@@ -18,7 +18,7 @@ function Dashboard() {
   const [filterText, setFilterText] = useState("");
   const [selectedRowData, setRowData] = useState([]);
   const [selectedColData, setColData] = useState([]);
-  console.log(process.env.REACT_APP_GOOGLE_MAPS_KEY);
+
   let cardData = [
     {
       title: "Moving",

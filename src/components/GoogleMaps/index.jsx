@@ -14,7 +14,6 @@ const MapComponent = ({ selectedLocation, setSelectedLocation }) => {
   const onMapLoad = React.useCallback((map) => {
     mapRef.current = map;
   }, []);
-  console.log(isLoaded);
   if (loadError) return "Error";
   if (!isLoaded) return "Maps";
 
